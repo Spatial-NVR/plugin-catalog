@@ -10,18 +10,9 @@ categories:
   - id: camera
     name: Camera Integrations
     description: Plugins for connecting different camera brands
-  - id: detection
-    name: AI Detection
-    description: Object detection, face recognition, license plate reading
   - id: integration
     name: Home Automation
     description: Integration with smart home platforms
-  - id: storage
-    name: Storage & Backup
-    description: Cloud storage and backup solutions
-  - id: notification
-    name: Notifications
-    description: Alert and notification services
 
 # Official plugins (maintained by Spatial-NVR)
 plugins:
@@ -30,7 +21,7 @@ plugins:
     name: Reolink
     description: Full integration for Reolink cameras and NVRs including PTZ, AI events, and two-way audio
     category: camera
-    repository: https://github.com/Spatial-NVR/reolink-plugin
+    repo: https://github.com/Spatial-NVR/reolink-plugin
     author: Spatial-NVR
     official: true
     verified: true
@@ -53,7 +44,7 @@ plugins:
     name: Wyze
     description: Integration for Wyze cameras with RTSP streaming support
     category: camera
-    repository: https://github.com/Spatial-NVR/wyze-plugin
+    repo: https://github.com/Spatial-NVR/wyze-plugin
     author: Spatial-NVR
     official: true
     verified: true
@@ -67,32 +58,16 @@ plugins:
       - Wyze Cam Pan
       - Wyze Cam Outdoor
 
-  - id: frigate
-    name: Frigate
-    description: Import cameras and events from an existing Frigate NVR installation
-    category: detection
-    repository: https://github.com/Spatial-NVR/frigate-plugin
-    author: Spatial-NVR
-    official: true
-    verified: true
-    icon: https://raw.githubusercontent.com/Spatial-NVR/frigate-plugin/main/icon.png
-    features:
-      - Camera import
-      - Event sync
-      - Recording sync
-      - Detection zone import
-    requirements:
-      - Frigate NVR 0.12+
-
   # Home automation integrations
   - id: homeassistant
     name: Home Assistant
     description: Bidirectional integration with Home Assistant for cameras, events, and automations
     category: integration
-    repository: https://github.com/Spatial-NVR/homeassistant-plugin
+    repo: https://github.com/Spatial-NVR/homeassistant-plugin
     author: Spatial-NVR
     official: true
-    verified: true
+    verified: false
+    status: coming-soon
     icon: https://raw.githubusercontent.com/Spatial-NVR/homeassistant-plugin/main/icon.png
     features:
       - Camera entity sync
@@ -106,7 +81,7 @@ plugins:
     name: HomeKit
     description: Expose cameras to Apple HomeKit for viewing in the Home app
     category: integration
-    repository: https://github.com/Spatial-NVR/homekit-plugin
+    repo: https://github.com/Spatial-NVR/homekit-plugin
     author: Spatial-NVR
     official: true
     verified: false
@@ -121,10 +96,11 @@ plugins:
     name: MQTT Publisher
     description: Publish detection events and camera status to an MQTT broker
     category: integration
-    repository: https://github.com/Spatial-NVR/mqtt-plugin
+    repo: https://github.com/Spatial-NVR/mqtt-plugin
     author: Spatial-NVR
     official: true
-    verified: true
+    verified: false
+    status: coming-soon
     icon: https://raw.githubusercontent.com/Spatial-NVR/mqtt-plugin/main/icon.png
     features:
       - Event publishing
@@ -132,41 +108,11 @@ plugins:
       - Custom topics
       - Auto-discovery (HA)
 
-  # Notification plugins
-  - id: telegram
-    name: Telegram
-    description: Send detection alerts with snapshots to Telegram
-    category: notification
-    repository: https://github.com/Spatial-NVR/telegram-plugin
-    author: Spatial-NVR
-    official: true
-    verified: false
-    status: coming-soon
-    features:
-      - Event notifications
-      - Snapshot attachments
-      - Video clips
-      - Interactive commands
-
-  - id: pushover
-    name: Pushover
-    description: Push notifications via Pushover service
-    category: notification
-    repository: https://github.com/Spatial-NVR/pushover-plugin
-    author: Spatial-NVR
-    official: true
-    verified: false
-    status: coming-soon
-    features:
-      - Priority levels
-      - Quiet hours
-      - Snapshot attachments
-
 # Community plugins (third-party, not verified)
 community_plugins:
   # Placeholder for community contributions
   # - id: example
   #   name: Example Plugin
-  #   repository: https://github.com/user/example-plugin
+  #   repo: https://github.com/user/example-plugin
   #   author: Community Author
   #   verified: false
