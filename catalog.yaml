@@ -40,24 +40,6 @@ plugins:
       - TrackMix (PTZ)
       - Doorbells
 
-  - id: wyze
-    name: Wyze
-    description: Integration for Wyze cameras with RTSP streaming support
-    category: camera
-    repo: https://github.com/Spatial-NVR/wyze-plugin
-    author: Spatial-NVR
-    official: true
-    verified: true
-    icon: https://raw.githubusercontent.com/Spatial-NVR/wyze-plugin/main/icon.png
-    features:
-      - RTSP streaming
-      - Motion detection
-      - Cloud event sync
-    supported_devices:
-      - Wyze Cam v2/v3
-      - Wyze Cam Pan
-      - Wyze Cam Outdoor
-
   # Home automation integrations
   - id: homeassistant
     name: Home Assistant
